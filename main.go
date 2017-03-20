@@ -1,17 +1,18 @@
 package main
 
 import (
-	"gopkg.in/mgo.v2"
-	"gopkg.in/gin-gonic/gin.v1"
+	"os"
+
+	"github.com/IoThinks/base-api/server"
+	"github.com/IoThinks/base-api/services"
 	"github.com/asaskevich/govalidator"
 	"github.com/spf13/viper"
-	"github.com/dernise/base-api/server"
-	"github.com/dernise/base-api/services"
-	"os"
+	"gopkg.in/gin-gonic/gin.v1"
+	"gopkg.in/mgo.v2"
 )
 
 func main() {
-	api := server.API{ Router: gin.Default(), Config: viper.New() }
+	api := server.API{Router: gin.Default(), Config: viper.New()}
 
 	err := api.LoadEnvVariables()
 	if err != nil {

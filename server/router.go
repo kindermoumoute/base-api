@@ -1,9 +1,9 @@
 package server
 
 import (
-	"gopkg.in/gin-gonic/gin.v1"
 	"github.com/dernise/base-api/controllers"
 	"github.com/dernise/base-api/middlewares"
+	"gopkg.in/gin-gonic/gin.v1"
 	"net/http"
 )
 
@@ -40,4 +40,3 @@ func (a API) SetupRouter() {
 		}
 	}
 }
-
